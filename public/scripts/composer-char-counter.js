@@ -13,7 +13,7 @@ $(document).ready(function() {
     //turn the numbers red if they go below zero
     charCounter.val(remChar)
     if (remChar <= 0) {
-      charCounter.css('color', '#e73b08')
+      charCounter.css('color', '#e73b08');
     };
   });
 });
