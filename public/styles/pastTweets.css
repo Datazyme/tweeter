@@ -1,0 +1,53 @@
+article {
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 700px;
+  border-style: solid;
+  height: 200px;
+  margin: 2em;
+  justify-content: space-between;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+}
+
+.past-tweets:hover {
+  box-shadow: 10px 10px 0px -1px  #c8cae1;
+}
+
+#flag:hover {
+  color: rgb(190, 97, 25);
+}
+
+#rotate-arrows:hover {
+  color: rgb(190, 97, 25);
+}
+
+#heart:hover {
+  color: rgb(190, 97, 25);
+}
+
+.tweet-header {
+  display: flex;
+  flex-direction: row;
+  width: 99%;
+  margin: 1%;
+  justify-content: inherit;
+}
+
+.tweet-header-left {
+  display: flex;
+  align-items: center;
+
+}
+
+.footer {
+  width: 100%;
+  border-top: solid;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  font-size:smaller;
+  align-items: center;
+}
