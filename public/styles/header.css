@@ -1,11 +1,13 @@
 .header {
   height: 520px;
   width: 100%;
-  background-color: burlywood;
   display: flex;
   justify-content: center;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: center;  
-  background-image: url("https://www.transparenttextures.com/patterns/padded.png");
+  align-items: center;
+  color: #FFFFFF;
+  background-color: #205596;
+  background-image: url("https://www.transparenttextures.com/patterns/swirl.png");
 };
+
