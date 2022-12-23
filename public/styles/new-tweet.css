@@ -1,11 +1,9 @@
 .new-tweet {
   display: flex;
-  width: 100%;
-  
+  width: 100%; 
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 } 
 
 .tweet {
@@ -21,3 +19,4 @@
   display: flex;
   justify-content: space-between;
 }
+
