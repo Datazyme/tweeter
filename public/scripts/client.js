@@ -30,7 +30,12 @@ const data = [
   }
 ]
   
-$(document).ready(function(){
+$(document).ready(function() {
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
 const renderTweets = function(data) {                                                                                  
   for (let tweet of data) {
@@ -53,7 +58,7 @@ const createTweetElement = function(data) {
    </h5>
      <span>
      <section class="tweet-content">
-     <p>${data.content.text}</p>
+     <p>${escape(data.content.text)}</p>
      </span>
    </section>
    <footer name="footer" class="footer" for="tweet-text">
@@ -87,7 +92,23 @@ $('.form-inline').submit(function(event) {
   event.preventDefault();
   alert( "Handler for .submit() called." );
   const data = $( this ).serialize();
-  $.post('/tweets', data);
+  const $text = $("#tweet-text").val()
+  if ($text === "") {
+    alert("no text submitted")
+  } else if ($text.length > 140) {
+    alert("text must be no more than 140 characters")
+  } else {
+    $.ajax({
+      url: "/tweets",
+      method: "POST",
+      data
+    })
+    .then(() => {
+      loadTweets()
+     })
+     $(".form-inline").trigger("reset");
+  }
+  ////$.post('/tweets', data);
 });
 
 })
