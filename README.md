@@ -11,8 +11,7 @@ Practice with HTML, CSS, JS, jQuery, AJAX front-end skills, Node, Express back-e
 !["Large screen view"](https://github.com/Datazyme/tweeter/blob/master/docs/tweeterLargeScreen.png)
 
 
-## Large screen view
-!["Small screen view"](https://github.com/Datazyme/tweeter/blob/master/docs/tweeterSmallScreen.png)
+## Small screen view
 <p align="center">
     <img src="https://github.com/Datazyme/tweeter/blob/master/docs/tweeterSmallScreen.png">
 </p>
