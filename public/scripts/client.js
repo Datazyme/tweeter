@@ -29,7 +29,9 @@ const data = [
     "created_at": 1461113959088
   }
 ]
-  
+
+//document.ready function to allow page to load and escape funtion to avoid 
+//unsafe characters and convert into a safe "encoded" representation
 $(document).ready(function() {
   const escape = function (str) {
     let div = document.createElement("div");
@@ -37,13 +39,16 @@ $(document).ready(function() {
     return div.innerHTML;
   };
 
-const renderTweets = function(data) {                                                                                  
+//takes in createTweetElemnt function to post submitted tweet at the top of tweets
+const renderTweets = function(data) {   
+  $('#tweets-container').empty();                                                                               
   for (let tweet of data) {
     const $tweet = createTweetElement(tweet);
     $('#tweets-container').prepend($tweet);    
   }
 };
 
+//takes in data object and creates html of tweet box, styled in pastTweets.css
 const createTweetElement = function(data) {
   let $tweet = $(`
   <article class="past-tweets">
@@ -56,10 +61,10 @@ const createTweetElement = function(data) {
      <p class="handle">${data.user.handle}</p>
      </span>
    </h5>
-     <span>
+     <div>
      <section class="tweet-content">
      <p>${escape(data.content.text)}</p>
-     </span>
+     </div>
    </section>
    <footer name="footer" class="footer" for="tweet-text">
      <span> ${timeago.format(data.created_at)} </span>
@@ -72,8 +77,10 @@ const createTweetElement = function(data) {
  </article>`);
 return $tweet;
 }
+//calls renderTweets, creating final tweet with data and createTweetElement
 renderTweets(data);
 
+//function gets past tweets and displays them with ajax without having to refresh the page
 const loadTweets = function() {
   $.ajax('/tweets', { method: 'GET' })
     .then((tweets) => {
@@ -84,19 +91,22 @@ const loadTweets = function() {
       console.log("There was an ERROR ", err);
     });
 };
-
+//calls function
 loadTweets();
 
-
+//event listner listens to submit event and prevents default form submission of sending post request 
+//and having to reload page (ajax). Loads tweet without reloading page, returns errors if no text input and
+//text is over 140char.
 $('.form-inline').submit(function(event) { 
   event.preventDefault();
-  alert( "Handler for .submit() called." );
   const data = $( this ).serialize();
   const $text = $("#tweet-text").val()
   if ($text === "") {
-    alert("no text submitted")
+    $(".error").text("Oops!, you have to write something!!")
+    $(".error").slideDown("slow").delay(2200).slideUp("slow");
   } else if ($text.length > 140) {
-    alert("text must be no more than 140 characters")
+    $(".error").text("Oops! your tweet must be 140 characters maximum");
+    $(".error").slideDown("slow").delay(2200).slideUp("slow");
   } else {
     $.ajax({
       url: "/tweets",
@@ -106,9 +116,9 @@ $('.form-inline').submit(function(event) {
     .then(() => {
       loadTweets()
      })
+     //empties form once tweet is submitted
      $(".form-inline").trigger("reset");
   }
-  ////$.post('/tweets', data);
 });
 
 })
