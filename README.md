@@ -2,10 +2,15 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+With Tweeter you can post new tweets and view past tweets. New tweets are posted immediately at the top and are viewed in reverse chronological order. Layout accomodates changes in screen size. 
+
+Practice with HTML, CSS, JS, jQuery, AJAX front-end skills, Node, Express back-end skills.
 
 ## Final Product Screenshots
 !["Large screen view"](https://github.com/Datazyme/tweeter/blob/master/docs/tweeterLargeScreen.png)
+
+
+!["Small screen view"](https://github.com/Datazyme/tweeter/blob/master/docs/tweeterSmallScreen.png)
 
 ## Getting Started
 
