@@ -7,10 +7,11 @@ With Tweeter you can post new tweets and view past tweets. New tweets are posted
 Practice with HTML, CSS, JS, jQuery, AJAX front-end skills, Node, Express back-end skills.
 
 ## Final Product Screenshots
+# Large screen view
 !["Large screen view"](https://github.com/Datazyme/tweeter/blob/master/docs/tweeterLargeScreen.png)
 
 
-!["Small screen view"](https://github.com/Datazyme/tweeter/blob/master/docs/tweeterSmallScreen.png)
+                  !["Small screen view"](https://github.com/Datazyme/tweeter/blob/master/docs/tweeterSmallScreen.png)
 
 ## Getting Started
 
