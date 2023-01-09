@@ -27,4 +27,6 @@ Practice with HTML, CSS, JS, jQuery, AJAX front-end skills, Node, Express back-e
 ## Dependencies
 
 - Express
+- chance
+- body-parser
 - Node 5.10.x or above
