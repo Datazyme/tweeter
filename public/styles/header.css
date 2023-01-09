@@ -1,6 +1,7 @@
+/* styling for header, html in index.html */
 .header {
-  height: 520px;
-  width: 100%;
+  height: 400px;
+  width: 90%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -9,5 +10,8 @@
   color: #FFFFFF;
   background-color: #205596;
   background-image: url("https://www.transparenttextures.com/patterns/swirl.png");
+  margin-top: 6em;
+  margin-left: 2em;
+  margin-right: 2em
 };
 
