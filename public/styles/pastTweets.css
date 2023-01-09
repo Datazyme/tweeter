@@ -1,17 +1,19 @@
+/* styling for posted tweet boxes, html in client.js referenced in index.html as #tweet-container */
 article {
   background-color: antiquewhite;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 700px;
+  width: 90%;
   border-style: solid;
-  height: 200px;
+  height: fit-content;
   margin: 2em;
   justify-content: space-between;
   padding-left: 0.3em;
   padding-right: 0.3em;
 }
 
+/* styling for flag, arrows and heart at the bottom right of past tweet box */
 .past-tweets:hover {
   box-shadow: 10px 10px 0px -1px  #c8cae1;
 }
@@ -28,6 +30,7 @@ article {
   color: rgb(190, 97, 25);
 }
 
+/* styling for avatar, name and handle, html inside client.js */
 .tweet-header {
   display: flex;
   flex-direction: row;
@@ -36,12 +39,19 @@ article {
   justify-content: inherit;
 }
 
+/* styling for avatar and name */
 .tweet-header-left {
   display: flex;
   align-items: center;
-
 }
 
+/* styling for tweet content box */
+.tweet-content {
+  word-break: break-all;
+  height:fit-content;
+}
+
+/* styling for footer */
 .footer {
   width: 100%;
   border-top: solid;
@@ -50,4 +60,14 @@ article {
   height: 40px;
   font-size:smaller;
   align-items: center;
+}
+
+/* media query to change screen size */
+@media only screen and (min-width: 1024px) {
+  body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+  }
 }
