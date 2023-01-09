@@ -54,7 +54,7 @@ const createTweetElement = function(data) {
   <article class="past-tweets">
    <h5 class="tweet-header">
      <span class="tweet-header-left">
-      <img src="${data.user.avatars}"> &nbsp;&nbsp;
+      <img src="${data.user.avatars}" alt="User Avatar"> &nbsp;&nbsp;
       <p>${data.user.name}</p>
      </span>
      <span>
