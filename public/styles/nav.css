@@ -1,35 +1,32 @@
+/* styling for navigation bar at top of page, html in index.html */
 nav {
   font-family: 'Bungee', cursive;
-  height: 120px;
+  height: 90px;
   background-color: #195195;
   color: #FFFFFF;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  padding-top: 2.5em;
+  padding-top: 1em;
   display: flex;
   justify-content: space-between;
   position:fixed;
   top: 0px;
   Width: 100%;
-
 }
 
+/* styles content on right side of page */
 .right {
   font-family: sans-serif;
   color: gold;
 }
 
-.icon::before {
-  display: inline-block;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-}
-
+/* styles arrows under write new tweet */
 i.fa-solid.fa-angles-down {
   color: crimson;
   display: flex;
   justify-content: center;
 }
+
 
 
 
