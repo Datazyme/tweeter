@@ -47,7 +47,7 @@ article {
 
 /* styling for tweet content box */
 .tweet-content {
-  word-break: break-all;
+  word-break: break-word;
   height:fit-content;
 }
 
@@ -68,6 +68,10 @@ article {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 0;   
+  }
+  .container {
     margin: 0;
+    padding-top: 5em;
   }
 }
