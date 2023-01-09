@@ -17,6 +17,7 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -24,10 +25,11 @@
   
     <!--link to fontawesome icons library-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
+    <!-- Top nav bar (fixed), styled in nav.css -->
     <nav>
       <span>tweeter</span>
       <div class="rightContent">
@@ -35,22 +37,24 @@
         <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
+    <!-- header with name and avatar of user, styled in header.css -->
     <header class="header">
       <div>
           <img src="/images/spider.png"> 
       </div>
       <br>
       <div>
-          <h2>Ana Bannana</h2>
+          <h2>Ana Banana</h2>
       </div>
     </header>
 
 
-    <!-- Create new tweet -->
+    <!-- Create new tweet, styled in layout.css and new-tweet.css-->
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form class="form-inline" action="/tweets" method="POST">
+        <div class="error"></div>
+        <form class="form-inline">
           <label for="tweet-text"></label>
           <textarea 
             name="text"
@@ -64,23 +68,10 @@
           </div>
         </form>
       </section>
-      <!-- Past tweets faked -->
-      <article class="past-tweets">
-        <h5 class="tweet-header">
-          <span class="tweet-header-left"><img src="https://i.imgur.com/73hZDYK.png">&nbsp;&nbsp;Newton</span>
-          <span>@Sirlsaac</span>
-        </h5>
-          <span>If I have seen further it is by standing on the shoulders of giants</span>
-        <footer name="footer" class="footer" for="tweet-text">
-          <span> 10 days ago </span>
-          <span>
-              <i id="flag" class="fa-solid fa-flag"></i>&nbsp;&nbsp;&nbsp;
-              <i id="rotate-arrows" class="fa-solid fa-arrows-rotate"></i>&nbsp;&nbsp;&nbsp;
-              <i id="heart" class="fa-solid fa-heart"></i>          
-          </span>
-        </footer>
-      </article>
-      
+      <!-- Past tweets styled in pastTweets.css and html in client.js -->
+      <section id="tweets-container">
+      </section>
     </main>
+
   </body>
 </html>
